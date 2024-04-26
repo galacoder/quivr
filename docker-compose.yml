@@ -19,7 +19,7 @@ services:
       - backend-core
     restart: always
     ports:
-      - 3000:3000
+      - 3017:3000
 
   backend-core:
     image: stangirard/quivr-backend-prebuilt:latest
@@ -54,7 +54,7 @@ services:
     container_name: redis
     restart: always
     ports:
-      - 6379:6379
+      - 6371:6379
 
   worker:
     pull_policy: if_not_present
@@ -106,7 +106,7 @@ services:
       - worker
       - beat
     ports:
-      - 5555:5555
+      - 5556:5555
 
 networks:
   quivr-network:
